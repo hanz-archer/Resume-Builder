@@ -10,16 +10,26 @@ const ResumeForm: React.FC = () => {
         experience: '',
     });
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>)
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
     return (
         <form className="space-y-4">
-        <input type="text" 
-        name="name" 
-        placeholder="name" 
-        value={FormData.name}/>
+            <input type="text" 
+            name="name" 
+            placeholder="name" 
+            value={formData.name}
+            onChange={handleChange}
+            className="input"/>
+
+            <input type="email" 
+            name="email" 
+            placeholder="email" 
+            value={formData.email}
+            onChange={handleChange}
+            className="input"/>
+
         </form>
     )
 
