@@ -15,6 +15,7 @@ const ResumeForm: React.FC = () => {
     };
 
     return (
+
         <form className="space-y-4">
             <input type="text" 
             name="name" 
@@ -30,7 +31,31 @@ const ResumeForm: React.FC = () => {
             onChange={handleChange}
             className="input"/>
 
+            <textarea
+            name="skills"
+            placeholder="skills (Comma-separated)"
+            value={formData.skills}
+            onChange={handleChange}
+            className="textArea"
+            />
+
+            <input type="education" 
+            name="education" 
+            placeholder="education" 
+            value={formData.education}
+            onChange={handleChange}
+            className="input"/>
+
+            <textarea
+            name="experience"
+            placeholder="experience (Comma-separated)"
+            value={formData.experience}
+            onChange={handleChange}
+            className="textArea"
+            />
+
         </form>
-    )
+    );
+};
 
 export default ResumeForm;
