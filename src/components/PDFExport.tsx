@@ -16,7 +16,7 @@ const PDFExport: React.FC <PDFExportProps> = ({ children }) => {
     return(
         <div>
             <div ref={componentRef}>{children}</div>
-            <button onClick={handlePrint} className="btn">
+            <button onClick={() => handlePrint()} className="btn">
             Export to PDF</button>
         </div>
     );
