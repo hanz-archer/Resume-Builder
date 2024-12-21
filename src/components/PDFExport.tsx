@@ -2,7 +2,7 @@ import React, {ReactNode, useRef} from "react";
 import { useReactToPrint } from "react-to-print";
 
 interface PDFExportProps{
-    children: ReactNode;
+    children?: ReactNode;
 }
 
 const PDFExport: React.FC <PDFExportProps> = ({ children }) => {
